@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit An Ad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Pakistan Largest Market Place</h1>
+        <button onclick="window.location.href='../My account/account.html'">My Account</button>
+        <button onclick="window.location.href='ad.html'">Submit An Ad</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <hr>
+
+    <h2 class="form-title">Submit An Ad</h2>
+
+    <div class="ad-form-container">
+        <form id="adForm" class="ad-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="adTitle">Ad Title</label>
+                <input type="text" id="adTitle" name="adTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Category">Category</label>
+                <select id="Category" name="Category" required>
+                    <option value="">Select Category</option>
+                    <option value="Mobiles">Mobiles</option>
+                    <option value="Cars">Cars</option>
+                    <option value="Bikes">Bikes</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Kids">Kids</option>
+                    <option value="Animals">Animals</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="AdDescription">Ad Description</label>
+                <textarea id="AdDescription" name="AdDescription" placeholder="Include the brand, model, age and any included accessories." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="UploadImage">Upload Photos</label>
+                <input type="file" id="UploadImage" name="UploadImage" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+
+            <div class="form-group">
+                <label for="BuyingDate">Buying Date</label>
+                <input type="date" id="BuyingDate" name="BuyingDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="BuyingPrice">Buying Price</label>
+                <input type="number" id="BuyingPrice" name="BuyingPrice" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" id="Name" name="Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Number">Number</label>
+                <input type="tel" id="Number" name="Number" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <select id="city" name="city" required>
+                    <option value="">Choose City</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Islamabad">Islamabad</option>
+                </select>
+            </div>
+
+            <p id="error" class="error"></p>
+
+            <button type="submit" class="submit-button">Submit Ad</button>
+        </form>
+    </div>
+
+    <div class="loader" style="display: none;" id="loader">
+        <img src="../loader.gif" alt="Loading">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
